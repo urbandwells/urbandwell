@@ -2,6 +2,9 @@ import Link from "next/link"
 import Image from "next/image"
 import { Calendar, User, Tag, Share2, Facebook, Twitter, Linkedin } from "lucide-react"
 
+// Add dynamic = "force-static" for static export
+export const dynamic = "force-static"
+
 // This would typically come from a database or CMS
 const blogPosts = [
   {
@@ -354,6 +357,13 @@ const blogPosts = [
     relatedPosts: [1, 4, 6],
   },
 ]
+
+// Add generateStaticParams function for static export
+export function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    id: post.id,
+  }))
+}
 
 export function generateMetadata({ params }: { params: { id: string } }) {
   const post = blogPosts.find((post) => post.id === params.id)

@@ -1,4 +1,16 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/robots.txt/route": "app/robots.txt/route.js",
+  "/sitemap.xml/route": "app/sitemap.xml/route.js",
   "/page": "app/page.js",
-  "/properties/page": "app/properties/page.js"
+  "/about/page": "app/about/page.js",
+  "/blog/[id]/page": "app/blog/[id]/page.js",
+  "/locations/page": "app/locations/page.js",
+  "/blog/page": "app/blog/page.js",
+  "/properties/page": "app/properties/page.js",
+  "/properties/[id]/page": "app/properties/[id]/page.js",
+  "/property-types/[type]/page": "app/property-types/[type]/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/locations/[location]/page": "app/locations/[location]/page.js",
+  "/property-types/page": "app/property-types/page.js"
 }

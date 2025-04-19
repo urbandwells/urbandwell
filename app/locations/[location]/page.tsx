@@ -4,6 +4,9 @@ import PropertyCard from "@/components/property-card"
 import { properties } from "@/data/properties"
 import { Landmark, Car, School, ShoppingBag, Hospital } from "lucide-react"
 
+// Add dynamic = "force-static" for static export
+export const dynamic = "force-static"
+
 // This would typically come from a database
 const locationData = {
   jagatpura: {
@@ -138,6 +141,13 @@ const locationData = {
     priceRange: "₹32 Lac - ₹2.8 Cr",
     rentalRange: "₹13,000 - ₹55,000 per month",
   },
+}
+
+// Add generateStaticParams function for static export
+export function generateStaticParams() {
+  return Object.keys(locationData).map((location) => ({
+    location,
+  }))
 }
 
 export function generateMetadata({ params }: { params: { location: string } }) {

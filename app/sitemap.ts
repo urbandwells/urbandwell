@@ -1,6 +1,9 @@
 import type { MetadataRoute } from "next"
 import { properties } from "@/data/properties"
 
+// Add dynamic = "force-static" for static export
+export const dynamic = "force-static"
+
 export default function sitemap(): MetadataRoute.Sitemap {
   // Base URL - replace with your actual domain in production
   const baseUrl = "https://jaipurhomes.com"

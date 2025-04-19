@@ -3,6 +3,9 @@ import Image from "next/image"
 import PropertyCard from "@/components/property-card"
 import { properties } from "@/data/properties"
 
+// Add dynamic = "force-static" for static export
+export const dynamic = "force-static"
+
 // This would typically come from a database
 const propertyTypeData = {
   apartment: {
@@ -195,6 +198,13 @@ const propertyTypeData = {
     maintenanceCost: "₹5 - ₹10 per sq.ft. per month",
     appreciationRate: "7-10% annually",
   },
+}
+
+// Add generateStaticParams function for static export
+export function generateStaticParams() {
+  return Object.keys(propertyTypeData).map((type) => ({
+    type,
+  }))
 }
 
 export function generateMetadata({ params }: { params: { type: string } }) {
