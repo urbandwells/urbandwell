@@ -46,7 +46,7 @@ jobs:
       - name: Build with Next.js
         run: npm run build
         env:
-          NEXT_PUBLIC_BASE_PATH: /<repository> # Replace with your repo name
+          NEXT_PUBLIC_BASE_PATH: urbandwell # Replace with your repo name
 
       - name: Static HTML export with Next.js
         run: npm run export
