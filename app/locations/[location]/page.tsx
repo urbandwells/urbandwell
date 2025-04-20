@@ -72,7 +72,7 @@ const locationData = {
       { type: "Plot", percentage: 10 },
       { type: "Commercial", percentage: 15 },
     ],
-    priceRange: "₹40 Lac - ₹3 Cr",
+    priceRange: "₹40 Lac - ₹3 Cr", 
     rentalRange: "₹15,000 - ₹60,000 per month",
   },
   mansarovar: {
